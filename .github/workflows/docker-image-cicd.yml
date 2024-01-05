@@ -16,4 +16,6 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile -t nextjs-boilerplate .
+
+    - name: Run the Docker image
       run: docker run -dp 3009:3000 nextjs-boilerplate
